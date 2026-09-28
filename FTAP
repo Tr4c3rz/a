@@ -1037,7 +1037,7 @@ GrabLinesTab:CreateSection("Grab")
 local killGrabRunning, killGrabCoroutine = false, nil
 GrabLinesTab:CreateToggle({
     value = false,
-   name = 'Kill Grab	 <font face="GothamBlack" color="rgb(255, 255, 255)">(PLAYER)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
+   name = 'Kill Grab	 <font face=\"GothamBlack\" color=\"rgb(255, 255, 255)\">(PLAYER)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
    flag = "KillGrabToggle",
    callback = function(v)
        if v then
@@ -1068,7 +1068,7 @@ GrabLinesTab:CreateToggle({
 getgenv().NoclipGrabConnection = nil
 GrabLinesTab:CreateToggle({
     value = false,
-    name = 'Noclip Grab		<font face="GothamBlack" color="rgb(255, 255, 255)">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
+    name = 'Noclip Grab		<font face=\"GothamBlack\" color=\"rgb(255, 255, 255)\">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
     flag = "ToggleNoclipGrab",
     callback = function(v)
         if getgenv().NoclipGrabConnection then
@@ -1108,7 +1108,7 @@ GrabLinesTab:CreateToggle({
 local Sense, Massless = 30, nil
 GrabLinesTab:CreateToggle({
     value = false,
-   name = 'Massless Grab	<font face="GothamBlack" color="rgb(255, 255, 255)">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
+   name = 'Massless Grab	<font face=\"GothamBlack\" color=\"rgb(255, 255, 255)\">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
    flag = "Toggle1",
    callback = function(v)
        if v then
@@ -1148,7 +1148,7 @@ local crazyGrabRunning = false
 local crazyGrabDelay = 0.1
 GrabLinesTab:CreateToggle({
     value = false,
-    name = 'Crazy Grab		<font face="GothamBlack" color="rgb(255, 255, 255)">(PLAYER)</font>	  <font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
+    name = 'Crazy Grab		<font face=\"GothamBlack\" color=\"rgb(255, 255, 255)\">(PLAYER)</font>	  <font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
     callback = function(v)
         if v then
             if crazyGrabRunning then return end
@@ -1233,7 +1233,7 @@ end
 
 GrabLinesTab:CreateToggle({
     value = false,
-    name = 'Strength	<font face="GothamBlack" color="rgb(255, 255, 255)">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
+    name = 'Strength	<font face=\"GothamBlack\" color=\"rgb(255, 255, 255)\">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
     flag = "FlingToggle",
     callback = function(v)
         if not v then
@@ -1331,7 +1331,7 @@ end
 
 local extendLineToggle = GrabLinesTab:CreateToggle({
     value = false,
-    name = 'Scroll Extend Line	<font face="GothamBlack" color="rgb(255, 255, 255)">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
+    name = 'Scroll Extend Line	<font face=\"GothamBlack\" color=\"rgb(255, 255, 255)\">(PLAYER & OBJECT)</font>	<font face="GothamBlack" color="rgb(7,255,0)">GRAB</font>',
     flag = "extendLineToggleFlag",
     callback = function(Value)
         infLineExtendT = Value
@@ -2095,7 +2095,7 @@ local function performKillAll()
 			Workspace.FallenPartsDestroyHeight = 0/0
 
 			local desiredCFrame = CFrame.new(tRoot.Position + TELEPORT_OFFSET)
-			hrpp:PivotTo(desiredCFrame)
+			hrp:PivotTo(desiredCFrame)
 
 			setNoCollideChar(tChar)
 			RemoteSetNetworkOwner:FireServer(tRoot, tRoot.CFrame)
@@ -3776,3 +3776,4 @@ end)
 Players.PlayerRemoving:Connect(function(p)
     manualWhitelist[p.UserId] = nil
 end)
+
